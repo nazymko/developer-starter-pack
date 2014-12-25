@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<configuration scan="true" scanPeriod="10 seconds">-->
+<configuration>
+
+    <!--todo rework on log4j 2-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd.MM.yy HH:mm:ss.SSS} %-5level [%thread] [%class:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/sample-app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>sample-app-.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{dd.MM.yy HH:mm:ss.SSS} %-5level [%thread] [%class:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--Your packages you interested in-->
+    <logger name="com.sample">
+        <level value="DEBUG"/>
+    </logger>
+
+    <!-- 3rdparty Loggers -->
+    <logger name="org.springframework">
+        <level value="INFO"/>
+    </logger>
+    <logger name="org.springframework.data">
+        <level value="INFO"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
