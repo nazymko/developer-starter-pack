@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'war'
+
+description = "Sample Project"
+version = "0.1"
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral();
+}
+ext {
+    springIntegrationVersion = "4.1.1.RELEASE"
+    jacksonVersion = "2.4.4"
+    slf4jVersion = '1.7.7'
+}
+
+dependencies {
+    compile "org.springframework.integration:spring-integration-core:${springIntegrationVersion}"
+    compile "org.springframework.integration:spring-integration-http:${springIntegrationVersion}"
+    compile "org.springframework:spring-webmvc:${springIntegrationVersion}"
+    compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+
+    compile "org.slf4j:slf4j-api:${slf4jVersion}",
+            'com.google.code.findbugs:jsr305:3.0.0'
+
+    runtime "org.slf4j:jcl-over-slf4j:${slf4jVersion}"
+    runtime 'ch.qos.logback:logback-classic:1.1.2'
+}
+
+
