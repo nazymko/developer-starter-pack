@@ -16,7 +16,11 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'sample'
+rootProject.name = 'starter-pack'
 
 include 'runner'
+
+include 'view'
+
+include 'datasource'
 

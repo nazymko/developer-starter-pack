@@ -7,4 +7,7 @@
     <import resource="classpath:/spring/integration/endpoint-example.xml"/>
     <import resource="classpath:/spring/app-config/spring-beans.xml"/>
 
+
+    <import resource="classpath*:/starter-pack/component/*"/>
+
 </beans>
