@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ExampleController {
     @RequestMapping("/example")
     public String todo() {
-        return "ExampleController";
+        return "index";
     }
 }

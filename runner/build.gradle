@@ -14,12 +14,14 @@ ext {
     springIntegrationVersion = "4.1.1.RELEASE"
     jacksonVersion = "2.4.4"
     slf4jVersion = '1.7.7'
+    thymeleafVersion = '2.1.4.RELEASE'
 }
 
 dependencies {
     compile project(path: ':datasource')
     compile project(path: ':view')
 
+    compile "org.thymeleaf:thymeleaf-spring4:${thymeleafVersion}"
     compile "org.springframework.integration:spring-integration-core:${springIntegrationVersion}"
     compile "org.springframework.integration:spring-integration-http:${springIntegrationVersion}"
     compile "org.springframework:spring-webmvc:${springIntegrationVersion}"

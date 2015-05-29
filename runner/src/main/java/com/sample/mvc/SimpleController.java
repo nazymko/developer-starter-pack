@@ -9,12 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SimpleController {
 
-    @RequestMapping("/hello")
+/*    @RequestMapping("/hello")
     public Object someAction() {
         return new Object() {
             public String name = "Andrew";
             public Integer age = 24;
         };
+    }*/
+
+
+    @RequestMapping("/hello")
+    public Object someAction() {
+     return "default";
     }
 
 }
