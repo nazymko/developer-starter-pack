@@ -12,3 +12,9 @@ Last changes:
 > Mapped "{[/root],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}"  ...
 
 * Initial gradle structure with no modules
+
+* Module with DataSource 
+
+* thymeleaf template engine  
+
+
