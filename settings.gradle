@@ -24,3 +24,5 @@ include 'view'
 
 include 'datasource'
 
+include 'tests'
+

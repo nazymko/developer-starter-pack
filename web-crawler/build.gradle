@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'war'
+
+description = "Sample Project"
+version = "0.1"
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral();
+}
+ext {
+    springIntegrationVersion = "4.1.1.RELEASE"
+    jacksonVersion = "2.4.4"
+    slf4jVersion = '1.7.7'
+    thymeleafVersion = '2.1.4.RELEASE'
+}
+
+dependencies {
+    'org.jsoup:jsoup:1.8.3'
+
+}
+
+
