@@ -13,8 +13,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class OwnerLoadTest {
 
 
-    TranslateDAO
-
     @Test
     public void testLoad() {
     }
