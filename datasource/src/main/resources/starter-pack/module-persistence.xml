@@ -3,4 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <import resource="spring/datasources.xml"/>
+    <import resource="spring/datasource-beans.xml"/>
+    <import resource="spring/spring-dao-config.xml"/>
+    <import resource="spring/spring-general-persistence.xml"/>
+
 </beans>
